@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+# 🚀 RAGaas Namespace Creator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React + TypeScript application that helps you create RAGaas Namespace from the RAGaaS API.
 
-Currently, two official plugins are available:
+## 🎯 What Does It Do?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This app does one thing and does it well: creates RAGaas Namespace from the RAGaaS API for your RAG system with:
+- Cloudflare R2 for document storage
+- Pinecone for vector storage
+- OpenAI for embeddings
 
-## Expanding the ESLint configuration
+## 🚀 Quick Start
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1. Install Dependencies
+```bash
+npm install   # or yarn, or pnpm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Configure Environment Variables
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Create a `.env` file with these required values:
+```env
+VITE_RAGAAS_API_KEY=your_key_here
+VITE_R2_BUCKET_NAME=your_bucket_name
+VITE_R2_ENDPOINT_URL=your_endpoint_url
+VITE_R2_ACCESS_KEY_ID=your_access_key
+VITE_R2_SECRET_ACCESS_KEY=your_secret_key
+VITE_PINECONE_API_KEY=your_pinecone_key
+VITE_PINECONE_INDEX_HOST=your_pinecone_host
+VITE_OPENAI_API_KEY=your_openai_key
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 3. Run the App
+```bash
+npm run dev
+```
+
+## 💡 Usage
+
+1. Start the application
+2. Click the "Create Namespace" button
+3. View the API response or any error messages
+
+That's it! The namespace will be created with your specified configuration.
+
+## 🔍 Response Example
+
+On success, you'll receive a namespace ID that you can use in your RAG applications.
+
+## ⚠️ Error Handling
+
+The app will display detailed error messages if something goes wrong, making it easy to troubleshoot configuration issues.
+
+---
+
+Built with React + TypeScript + Vite 🛠️
 ```
