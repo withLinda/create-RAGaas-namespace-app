@@ -54,4 +54,3 @@ The app will display detailed error messages if something goes wrong, making it 
 ---
 
 Built with React + TypeScript + Vite 🛠️
-```
