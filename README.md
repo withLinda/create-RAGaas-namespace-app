@@ -1,4 +1,5 @@
 # 🚀 RAGaaS Namespace Creator
+<img width="1006" alt="namespace" src="https://github.com/user-attachments/assets/e6cef13c-f8c0-475c-938c-f12d165e95eb" />
 
 A modern React + TypeScript application that helps you create RAGaaS Namespace with your choice of embedding models through the RAGaaS API.
 
