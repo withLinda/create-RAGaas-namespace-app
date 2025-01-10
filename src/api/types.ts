@@ -15,11 +15,21 @@ export interface FileStorageConfig {
     indexHost: string
   }
   
-  export interface EmbeddingModelConfig {
-    provider: 'OPENAI' | 'COHERE'  // This one uses 'provider' and supports multiple options
+  export interface OpenAIEmbeddingConfig {
+    provider: 'OPENAI'
     model: string
     apiKey: string
-  }
+}
+
+export interface JINAEmbeddingConfig {
+    provider: 'JINA'
+    model: string
+    apiKey: string
+    dimensions: number
+    task: string
+}
+
+export type EmbeddingModelConfig = OpenAIEmbeddingConfig | JINAEmbeddingConfig
   
   export interface NamespaceConfig {
     name: string
@@ -28,5 +38,7 @@ export interface FileStorageConfig {
     vectorStorageConfig: VectorStorageConfig
     embeddingModelConfig: EmbeddingModelConfig
   }
+
+  
   
   

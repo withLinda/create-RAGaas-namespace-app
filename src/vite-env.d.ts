@@ -8,6 +8,7 @@ interface ImportMetaEnv {
     readonly VITE_PINECONE_API_KEY: string
     readonly VITE_PINECONE_INDEX_HOST: string
     readonly VITE_OPENAI_API_KEY: string
+    readonly VITE_JINA_API_KEY?: string  // Add optional JINA API key
   }
   
   interface ImportMeta {
